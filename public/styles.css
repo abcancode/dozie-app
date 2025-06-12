@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Satoshi";
+
+  src: url("/assets/fonts/Satoshi-Black.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-BlackItalic.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-Bold.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-BoldItalic.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-Italic.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-Light.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-LightItalic.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-Medium.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-MediumItalic.otf") format("otf");
+  src: url("/assets/fonts/Satoshi-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Sentient";
+
+  src: url("/assets/fonts/Sentient-Bold.otf") format("otf");
+  src: url("/assets/fonts/Sentient-BoldItalic.otf") format("otf");
+  src: url("/assets/fonts/Sentient-Extralight.otf") format("otf");
+  src: url("/assets/fonts/Sentient-ExtralightItalic.otf") format("otf");
+  src: url("/assets/fonts/Sentient-Italic.otf") format("otf");
+  src: url("/assets/fonts/Sentient-Light.otf") format("otf");
+  src: url("/assets/fonts/Sentient-LightItalic.otf") format("otf");
+  src: url("/assets/fonts/Sentient-Medium.otf") format("otf");
+  src: url("/assets/fonts/Sentient-MediumItalic.otf") format("otf");
+  src: url("/assets/fonts/Sentient-Regular.otf") format("otf");
+}
+
+:root {
+  --ff-primary: "Satoshi";
+  --ff-secondary: "Sentient";
+  --clr-primary: #141415;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: var(--clr-primary);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  height: 100vh;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header-text {
+  margin-top: 5rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid grey;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+#text_header {
+  font-size: 1.8rem;
+}
+
+.text_about,
+.text_startup,
+.text_startup_second {
+  text-align: justify;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  font-family: var(--ff-secondary);
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  color: var(--clr-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.about_header,
+.project_header,
+.contact_header {
+  color: var(--clr-primary);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--clr-primary);
+  color: #ddd;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
