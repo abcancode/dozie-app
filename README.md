@@ -95,4 +95,4 @@
 * IP Address - 35.176.73.50
 
 ### Below is the screenshot of the rendered page
-* ![Landing Page](~/dozie-app/public/img/landing-page.png)
+* ![Landing Page](/public/img/landing-page.png)
