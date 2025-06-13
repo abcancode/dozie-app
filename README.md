@@ -82,7 +82,7 @@
 7. Installed Let's Encrypt
 `sudo apt install certbot python3-certbot-nginx -y`
 
-`sudo certbot --nginx -d Agrifex.crabdance.com -d www.Agrifex.crabdance.com`
+`sudo certbot --nginx -d Agrifex.crabdance.com`
 
 8. I followed the prompt and entered my email
 
@@ -94,6 +94,5 @@
 
 * IP Address - 35.176.73.50
 
-* Web App is on [Agrifex Startup Team](agrifex.crabdance.com)
-
 ### Below is the screenshot of the rendered page
+* ![Landing Page](~/dozie-app/public/img/landing-page.png)
