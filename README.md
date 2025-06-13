@@ -92,7 +92,9 @@
 
 ### Page is hosted at
 
-* IP Address - 35.176.73.50
+* IP Address - `35.176.73.50` 
+
+* URL - [Agrifex Startup Team | Chidozie Ugwu](https://agrifex.crabdance.com)
 
 ### Below is the screenshot of the rendered page
 * ![Landing Page](/public/img/landing-page.png)
