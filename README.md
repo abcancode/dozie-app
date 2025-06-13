@@ -20,6 +20,8 @@
 8. I connected the EC2 Server via SSH Client using Termius
 `ssh -i my-key.pem ubuntu@my-ec2-ip.eu-west-1.compute.amazonaws.com`
 
+***
+
 ###  Web Server Setup(Next-Level Choices)
 1. On the Termius terminal, I installed node.js and npm
 `sudo apt update`
@@ -57,6 +59,8 @@
 
 9. I ran my app `node server.js`
 
+***
+
 ### Depoloyment 
 1. I installed Nginx
 `sudo apt install nginx -y`
@@ -84,8 +88,12 @@
 
 9. Everything worked and I pushed to Github!
 
+***
+
 ### Page is hosted at
 
 * IP Address - 35.176.73.50
+
+* Web App is on [Agrifex Startup Team](agrifex.crabdance.com)
 
 ### Below is the screenshot of the rendered page
