@@ -3,13 +3,21 @@
 ## Steps taken to achieve the Project
 
 ### Provisioning Server (Server Setup - Modern Approach)
-1. I use Windows Operating System
+1. I used Windows Operating System
+
 2. I created an AWS account.
+
 3. I logged into the AWS console
+
 4. I launched an EC2 instance in London
-5. I created a key pair
-6. I allocated storage(20) and selected gp2
-7. I connected the EC2 Server via SSH Client using Termius
+
+5. I allowed the HTTP and HTTPS ports
+
+6. I created a key pair
+
+7. I allocated storage(20) and selected gp2
+
+8. I connected the EC2 Server via SSH Client using Termius
 `ssh -i my-key.pem ubuntu@my-ec2-ip.eu-west-1.compute.amazonaws.com`
 
 ###  Web Server Setup(Next-Level Choices)
@@ -45,5 +53,39 @@
 `app.use(express.static(path.join(_dirname,'public')));`
 
 `const PORT = process.env.PORT || 3000;`
-`app.listen(PORT, () => { console.log(`Chidozie Application running on http://localhost:${PORT}`);});`
+``app.listen(PORT, () => { console.log(Chidozie Application running on http://localhost:${PORT});});``
 
+9. I ran my app `node server.js`
+
+### Depoloyment 
+1. I installed Nginx
+`sudo apt install nginx -y`
+
+2. I created and configured a config file
+`sudo nano /etc/nginx/sites-available/Agrifex.crabdance.com`
+
+3. I enabled the config file
+`sudo ln -s /etc/nginx/sites-available/Agrifex.crabdance.com /etc/nginx/sites-enabled/`
+
+4. I implemented a reverse proxy with the configuration setup
+
+5. Tested everything to make sure all is working fine
+`sudo nginx -t`
+
+6. Reloaded Nginx
+`sudo systemctl reload nginx`
+
+7. Installed Let's Encrypt
+`sudo apt install certbot python3-certbot-nginx -y`
+
+`sudo certbot --nginx -d Agrifex.crabdance.com -d www.Agrifex.crabdance.com`
+
+8. I followed the prompt and entered my email
+
+9. Everything worked and I pushed to Github!
+
+### Page is hosted at
+
+* IP Address - 35.176.73.50
+
+### Below is the screenshot of the rendered page
